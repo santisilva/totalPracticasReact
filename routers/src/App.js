@@ -18,7 +18,7 @@ function App() {
         <Link to="/" className="btn btn-dark">
           Inicio
         </Link>
-        <Link to="/Nosotros" className="btn btn-dark">
+        <Link to="/Nosotros" className="btn btn-dark">{/* en to va la misma ruta que en el path */}
           Nosotros
         </Link>
         <Link to="/Contacto" className="btn btn-dark">
