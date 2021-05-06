@@ -7,10 +7,12 @@ import {
   Switch,
   Route,
   Link,
-  NavLink
+ // NavLink
 } from "react-router-dom";
+import Civilizacion from './components/Civilizacion';
 
 function App() {
+
   return (
     <Router>
     <div className="container">
@@ -18,10 +20,10 @@ function App() {
         <Link to="/" className="btn btn-dark">
           Inicio
         </Link>
-        <Link to="/Nosotros" className="btn btn-dark">{/* en to va la misma ruta que en el path */}
+        <Link to="/nosotros" className="btn btn-dark">{/* en to va la misma ruta que en el path */}
           Nosotros
         </Link>
-        <Link to="/Contacto" className="btn btn-dark">
+        <Link to="/contacto" className="btn btn-dark">
           Contacto
         </Link>
 
@@ -29,10 +31,13 @@ function App() {
       <h1>navbar</h1>
       <hr/>
       <Switch>
+        <Route path="/nosotros/:id">{/* :id tomara cualquier valor, el cual despues debemos tratar como queramos  */}
+          <Civilizacion/>
+        </Route>
         <Route path="/contacto"> {/* con route y la etiqueta path se pued configurar una nueva ruta para el navegador*/}
           <Contacto/>
         </Route>
-        <Route path="/nosotros"> 
+        <Route path="/nosotros" exact> 
           <Nosotros/>
         </Route>
         <Route path="/" exact> {/* este path tambien podria estar vacio*/}
