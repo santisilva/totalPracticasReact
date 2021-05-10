@@ -4,8 +4,8 @@ import {withRouter} from 'react-router-dom'
 
 const Loginn = (props) => {
 
-    const [email,setEmail] = React.useState('')
-    const [pass,setPass] = React.useState('')
+    const [email,setEmail] = React.useState()
+    const [pass,setPass] = React.useState()
     const [error,setError] = React.useState(null)
     const [esRegistro, setEsRegistro] = React.useState(true)
 
@@ -66,6 +66,10 @@ const Loginn = (props) => {
             await db.collection('usuarios').doc(respuesta.user.email).set({
                 email: respuesta.user.email,
                 uid: respuesta.user.uid
+            })
+            await db.collection(respuesta.user.uid).add({
+                name: 'tarea de ejemplo',
+                fecha: Date.now()
             })
             console.log(respuesta.user)
             setEmail('')
@@ -129,8 +133,17 @@ const Loginn = (props) => {
                             esRegistro? "Ya tienes cuenta?":"No tienes cuenta?"
                          }
                          </button>
-                         
                         </div>
+                        {
+                         !esRegistro?(
+                            <button 
+                                className="btn btn-danger btn-sm mt-2" 
+                                type="button"
+                                onClick={()=> props.history.push("/reset")}
+                            >
+                                Recuperar contraseña
+                            </button>):null
+                        }
                     </form>
                 </div>
             </div>

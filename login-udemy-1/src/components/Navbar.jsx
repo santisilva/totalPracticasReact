@@ -8,7 +8,7 @@ const Navbar = (props) => {
     const cerrarSesion = ()=> {
         auth.signOut()
             .then(()=>{
-
+                props.history.push('/login')
             })
     }
 
