@@ -76,14 +76,14 @@ const Perfil = () => {
                 <div className="card-body">
                     <div className="row justify-content-center">
                         <div className="col-md-6 float-end">
-                            <div class="input-group">
+                            <div className="input-group">
                                 <input 
                                      type="text"
                                      className= "form-control"
                                      value= {nombreUsuario}
                                      onChange={e=> setNombreUsuario(e.target.value)}
                                 />
-                                <span class="input-group-btn">
+                                <span className="input-group-btn">
                                     <button 
                                         className="btn btn-dark" 
                                         type="button" 
@@ -95,7 +95,7 @@ const Perfil = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>  
             }
             <div className="custom-file">
                 <input 
