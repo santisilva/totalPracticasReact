@@ -5,12 +5,13 @@ import 'firebase/storage'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBz9QCZa-eRBaKr89usspJmghrfsM1R6Jo",
-  authDomain: "crud-udemy-ss.firebaseapp.com",
-  projectId: "crud-udemy-ss",
-  storageBucket: "crud-udemy-ss.appspot.com",
-  messagingSenderId: "461899674572",
-  appId: "1:461899674572:web:f21172e8c7c500511f6369"
+  apiKey: "AIzaSyDoItvEVr9L0ifEmLw49pmpy0JVvVZsl48",
+    authDomain: "pokemons-1a1c2.firebaseapp.com",
+    projectId: "pokemons-1a1c2",
+    storageBucket: "pokemons-1a1c2.appspot.com",
+    messagingSenderId: "967734735028",
+    appId: "1:967734735028:web:62c09cf18cb6965131e7e1",
+    measurementId: "G-2QMVMV471K"
 };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
